@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import MatchCard from "./components/MatchCard";
 import Link from "next/link";
+import Image from "next/image";
 
 console.log('MatchCard imported:', typeof MatchCard);
 
@@ -232,7 +233,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Upcoming Matches</h2>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-              Don't miss any action from IPL 2025. Check the schedule and watch live!
+              Don&apos;t miss any action from IPL 2025. Check the schedule and watch live!
             </p>
           </div>
           
@@ -384,9 +385,11 @@ export default function Home() {
                 <Link href={`/team/${team.id}`} key={team.id} className="block">
                   <div className="text-center p-4 bg-gray-100 dark:bg-gray-700 rounded-lg hover:shadow-lg transition-shadow duration-300">
                     {team.logo_url ? (
-                      <img 
+                      <Image 
                         src={team.logo_url} 
-                        alt={team.name} 
+                        alt={team.name}
+                        width={64}
+                        height={64}
                         className="h-16 w-16 mx-auto mb-3 rounded-full object-cover"
                       />
                     ) : (
