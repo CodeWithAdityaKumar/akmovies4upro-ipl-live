@@ -1,0 +1,597 @@
+{
+  "tournament": "Indian Premier League 2025",
+  "matches": [
+    {
+      "match_no": 1,
+      "team1": "Kolkata Knight Riders",
+      "team2": "Royal Challengers Bengaluru",
+      "date": "2025-03-22",
+      "time": "14:00 GMT",
+      "venue": "Eden Gardens, Kolkata"
+    },
+    {
+      "match_no": 2,
+      "team1": "Sunrisers Hyderabad",
+      "team2": "Rajasthan Royals",
+      "date": "2025-03-23",
+      "time": "10:00 GMT",
+      "venue": "Rajiv Gandhi International Stadium, Hyderabad"
+    },
+    {
+      "match_no": 3,
+      "team1": "Chennai Super Kings",
+      "team2": "Mumbai Indians",
+      "date": "2025-03-23",
+      "time": "14:00 GMT",
+      "venue": "M.A. Chidambaram Stadium, Chennai"
+    },
+    {
+      "match_no": 4,
+      "team1": "Delhi Capitals",
+      "team2": "Lucknow Super Giants",
+      "date": "2025-03-24",
+      "time": "14:00 GMT",
+      "venue": "Arun Jaitley Stadium, Delhi"
+    },
+    {
+      "match_no": 5,
+      "team1": "Gujarat Titans",
+      "team2": "Punjab Kings",
+      "date": "2025-03-25",
+      "time": "14:00 GMT",
+      "venue": "Narendra Modi Stadium, Ahmedabad"
+    },
+    {
+      "match_no": 6,
+      "team1": "Rajasthan Royals",
+      "team2": "Kolkata Knight Riders",
+      "date": "2025-03-26",
+      "time": "14:00 GMT",
+      "venue": "Sawai Mansingh Stadium, Jaipur"
+    },
+    {
+      "match_no": 7,
+      "team1": "Sunrisers Hyderabad",
+      "team2": "Lucknow Super Giants",
+      "date": "2025-03-27",
+      "time": "14:00 GMT",
+      "venue": "Rajiv Gandhi International Stadium, Hyderabad"
+    },
+    {
+      "match_no": 8,
+      "team1": "Chennai Super Kings",
+      "team2": "Royal Challengers Bengaluru",
+      "date": "2025-03-28",
+      "time": "14:00 GMT",
+      "venue": "M.A. Chidambaram Stadium, Chennai"
+    },
+    {
+      "match_no": 9,
+      "team1": "Gujarat Titans",
+      "team2": "Mumbai Indians",
+      "date": "2025-03-29",
+      "time": "14:00 GMT",
+      "venue": "Narendra Modi Stadium, Ahmedabad"
+    },
+    {
+      "match_no": 10,
+      "team1": "Delhi Capitals",
+      "team2": "Sunrisers Hyderabad",
+      "date": "2025-03-30",
+      "time": "10:00 GMT",
+      "venue": "Arun Jaitley Stadium, Delhi"
+    },
+    {
+      "match_no": 11,
+      "team1": "Rajasthan Royals",
+      "team2": "Chennai Super Kings",
+      "date": "2025-03-30",
+      "time": "14:00 GMT",
+      "venue": "Sawai Mansingh Stadium, Jaipur"
+    },
+    {
+      "match_no": 12,
+      "team1": "Mumbai Indians",
+      "team2": "Kolkata Knight Riders",
+      "date": "2025-03-31",
+      "time": "14:00 GMT",
+      "venue": "Wankhede Stadium, Mumbai"
+    },
+    {
+      "match_no": 13,
+      "team1": "Lucknow Super Giants",
+      "team2": "Punjab Kings",
+      "date": "2025-04-01",
+      "time": "14:00 GMT",
+      "venue": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow"
+    },
+    {
+      "match_no": 14,
+      "team1": "Royal Challengers Bengaluru",
+      "team2": "Gujarat Titans",
+      "date": "2025-04-02",
+      "time": "14:00 GMT",
+      "venue": "M. Chinnaswamy Stadium, Bengaluru"
+    },
+    {
+      "match_no": 15,
+      "team1": "Kolkata Knight Riders",
+      "team2": "Sunrisers Hyderabad",
+      "date": "2025-04-03",
+      "time": "14:00 GMT",
+      "venue": "Eden Gardens, Kolkata"
+    },
+    {
+      "match_no": 16,
+      "team1": "Lucknow Super Giants",
+      "team2": "Mumbai Indians",
+      "date": "2025-04-04",
+      "time": "14:00 GMT",
+      "venue": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow"
+    },
+    {
+      "match_no": 17,
+      "team1": "Chennai Super Kings",
+      "team2": "Delhi Capitals",
+      "date": "2025-04-05",
+      "time": "10:00 GMT",
+      "venue": "M.A. Chidambaram Stadium, Chennai"
+    },
+    {
+      "match_no": 18,
+      "team1": "Punjab Kings",
+      "team2": "Rajasthan Royals",
+      "date": "2025-04-05",
+      "time": "14:00 GMT",
+      "venue": "Punjab Cricket Association IS Bindra Stadium, Mohali"
+    },
+    {
+      "match_no": 19,
+      "team1": "Kolkata Knight Riders",
+      "team2": "Lucknow Super Giants",
+      "date": "2025-04-06",
+      "time": "10:00 GMT",
+      "venue": "Eden Gardens, Kolkata"
+    },
+    {
+      "match_no": 20,
+      "team1": "Sunrisers Hyderabad",
+      "team2": "Gujarat Titans",
+      "date": "2025-04-06",
+      "time": "14:00 GMT",
+      "venue": "Rajiv Gandhi International Stadium, Hyderabad"
+    },
+    {
+      "match_no": 21,
+      "team1": "Mumbai Indians",
+      "team2": "Royal Challengers Bengaluru",
+      "date": "2025-04-07",
+      "time": "14:00 GMT",
+      "venue": "Wankhede Stadium, Mumbai"
+    },
+    {
+      "match_no": 22,
+      "team1": "Punjab Kings",
+      "team2": "Chennai Super Kings",
+      "date": "2025-04-08",
+      "time": "14:00 GMT",
+      "venue": "Punjab Cricket Association IS Bindra Stadium, Mohali"
+    },
+    {
+      "match_no": 23,
+      "team1": "Gujarat Titans",
+      "team2": "Rajasthan Royals",
+      "date": "2025-04-09",
+      "time": "14:00 GMT",
+      "venue": "Narendra Modi Stadium, Ahmedabad"
+    },
+    {
+      "match_no": 24,
+      "team1": "Royal Challengers Bengaluru",
+      "team2": "Delhi Capitals",
+      "date": "2025-04-10",
+      "time": "14:00 GMT",
+      "venue": "M. Chinnaswamy Stadium, Bengaluru"
+    },
+    {
+      "match_no": 25,
+      "team1": "Chennai Super Kings",
+      "team2": "Kolkata Knight Riders",
+      "date": "2025-04-11",
+      "time": "14:00 GMT",
+      "venue": "M.A. Chidambaram Stadium, Chennai"
+    },
+    {
+      "match_no": 26,
+      "team1": "Lucknow Super Giants",
+      "team2": "Gujarat Titans",
+      "date": "2025-04-12",
+      "time": "10:00 GMT",
+      "venue": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow"
+    },
+    {
+      "match_no": 27,
+      "team1": "Sunrisers Hyderabad",
+      "team2": "Punjab Kings",
+      "date": "2025-04-12",
+      "time": "14:00 GMT",
+      "venue": "Rajiv Gandhi International Stadium, Hyderabad"
+    },
+    {
+      "match_no": 28,
+      "team1": "Rajasthan Royals",
+      "team2": "Royal Challengers Bengaluru",
+      "date": "2025-04-13",
+      "time": "10:00 GMT",
+      "venue": "Sawai Mansingh Stadium, Jaipur"
+    },
+    {
+      "match_no": 29,
+      "team1": "Delhi Capitals",
+      "team2": "Mumbai Indians",
+      "date": "2025-04-13",
+      "time": "14:00 GMT",
+      "venue": "Arun Jaitley Stadium, Delhi"
+    },
+    {
+      "match_no": 30,
+      "team1": "Lucknow Super Giants",
+      "team2": "Chennai Super Kings",
+      "date": "2025-04-14",
+      "time": "14:00 GMT",
+      "venue": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow"
+    },
+    {
+      "match_no": 31,
+      "team1": "Punjab Kings",
+      "team2": "Kolkata Knight Riders",
+      "date": "2025-04-15",
+      "time": "14:00 GMT",
+      "venue": "Punjab Cricket Association IS Bindra Stadium, Mohali"
+    },
+    {
+      "match_no": 32,
+      "team1": "Delhi Capitals",
+      "team2": "Rajasthan Royals",
+      "date": "2025-04-16",
+      "time": "14:00 GMT",
+      "venue": "Arun Jaitley Stadium, Delhi"
+    },
+    {
+      "match_no": 33,
+      "team1": "Mumbai Indians",
+      "team2": "Sunrisers Hyderabad",
+      "date": "2025-04-17",
+      "time": "14:00 GMT",
+      "venue": "Wankhede Stadium, Mumbai"
+    },
+    {
+      "match_no": 34,
+      "team1": "Royal Challengers Bengaluru",
+      "team2": "Punjab Kings",
+      "date": "2025-04-18",
+      "time": "14:00 GMT",
+      "venue": "M. Chinnaswamy Stadium, Bengaluru"
+    },
+    {
+      "match_no": 35,
+      "team1": "Gujarat Titans",
+      "team2": "Delhi Capitals",
+      "date": "2025-04-19",
+      "time": "10:00 GMT",
+      "venue": "Narendra Modi Stadium, Ahmedabad"
+    },
+    {
+      "match_no": 36,
+      "team1": "Rajasthan Royals",
+      "team2": "Lucknow Super Giants",
+      "date": "2025-04-19",
+      "time": "14:00 GMT",
+      "venue": "Sawai Mansingh Stadium, Jaipur"
+    },
+    {
+      "match_no": 37,
+      "team1": "Punjab Kings",
+      "team2": "Royal Challengers Bengaluru",
+      "date": "2025-04-20",
+      "time": "10:00 GMT",
+      "venue": "Punjab Cricket Association IS Bindra Stadium, Mohali"
+    },
+    {
+      "match_no": 38,
+      "team1": "Mumbai Indians",
+      "team2": "Chennai Super Kings",
+      "date": "2025-04-20",
+      "time": "14:00 GMT",
+      "venue": "Wankhede Stadium, Mumbai"
+    },
+    {
+      "match_no": 39,
+      "team1": "Kolkata Knight Riders",
+      "team2": "Gujarat Titans",
+      "date": "2025-04-21",
+      "time": "14:00 GMT",
+      "venue": "Eden Gardens, Kolkata"
+    },
+    {
+      "match_no": 40,
+      "team1": "Lucknow Super Giants",
+      "team2": "Delhi Capitals",
+      "date": "2025-04-22",
+      "time": "14:00 GMT",
+      "venue": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow"
+    },
+    {
+      "match_no": 41,
+      "team1": "Sunrisers Hyderabad",
+      "team2": "Mumbai Indians",
+      "date": "2025-04-23",
+      "time": "14:00 GMT",
+      "venue": "Rajiv Gandhi International Stadium, Hyderabad"
+    },
+    {
+      "match_no": 42,
+      "team1": "Royal Challengers Bengaluru",
+      "team2": "Rajasthan Royals",
+      "date": "2025-04-24",
+      "time": "14:00 GMT",
+      "venue": "M. Chinnaswamy Stadium, Bengaluru"
+    },
+    {
+      "match_no": 43,
+      "team1": "Chennai Super Kings",
+      "team2": "Sunrisers Hyderabad",
+      "date": "2025-04-25",
+      "time": "14:00 GMT",
+      "venue": "M.A. Chidambaram Stadium, Chennai"
+    },
+    {
+      "match_no": 44,
+      "team1": "Kolkata Knight Riders",
+      "team2": "Punjab Kings",
+      "date": "2025-04-26",
+      "time": "14:00 GMT",
+      "venue": "Eden Gardens, Kolkata"
+    },
+    {
+      "match_no": 45,
+      "team1": "Mumbai Indians",
+      "team2": "Lucknow Super Giants",
+      "date": "2025-04-27",
+      "time": "10:00 GMT",
+      "venue": "Wankhede Stadium, Mumbai"
+    },
+    {
+      "match_no": 46,
+      "team1": "Delhi Capitals",
+      "team2": "Royal Challengers Bengaluru",
+      "date": "2025-04-27",
+      "time": "14:00 GMT",
+      "venue": "Arun Jaitley Stadium, Delhi"
+    },
+    {
+      "match_no": 47,
+      "team1": "Rajasthan Royals",
+      "team2": "Gujarat Titans",
+      "date": "2025-04-28",
+      "time": "14:00 GMT",
+      "venue": "Sawai Mansingh Stadium, Jaipur"
+    },
+    {
+      "match_no": 48,
+      "team1": "Delhi Capitals",
+      "team2": "Kolkata Knight Riders",
+      "date": "2025-04-29",
+      "time": "14:00 GMT",
+      "venue": "Arun Jaitley Stadium, Delhi"
+    },
+    {
+      "match_no": 49,
+      "team1": "Chennai Super Kings",
+      "team2": "Punjab Kings",
+      "date": "2025-04-30",
+      "time": "14:00 GMT",
+      "venue": "M.A. Chidambaram Stadium, Chennai"
+    },
+    {
+      "match_no": 50,
+      "team1": "Rajasthan Royals",
+      "team2": "Mumbai Indians",
+      "date": "2025-05-01",
+      "time": "14:00 GMT",
+      "venue": "Sawai Mansingh Stadium, Jaipur"
+    },
+    {
+      "match_no": 51,
+      "team1": "Gujarat Titans",
+      "team2": "Sunrisers Hyderabad",
+      "date": "2025-05-02",
+      "time": "14:00 GMT",
+      "venue": "Narendra Modi Stadium, Ahmedabad"
+    },
+    {
+      "match_no": 52,
+      "team1": "Royal Challengers Bengaluru",
+      "team2": "Chennai Super Kings",
+      "date": "2025-05-03",
+      "time": "14:00 GMT",
+      "venue": "M. Chinnaswamy Stadium, Bengaluru"
+    },
+    {
+      "match_no": 53,
+      "team1": "Kolkata Knight Riders",
+      "team2": "Rajasthan Royals",
+      "date": "2025-05-04",
+      "time": "10:00 GMT",
+      "venue": "Eden Gardens, Kolkata"
+    },
+    {
+      "match_no": 54,
+      "team1": "Punjab Kings",
+      "team2": "Lucknow Super Giants",
+      "date": "2025-05-04",
+      "time": "14:00 GMT",
+      "venue": "Punjab Cricket Association IS Bindra Stadium, Mohali"
+    },
+    {
+      "match_no": 55,
+      "team1": "Sunrisers Hyderabad",
+      "team2": "Delhi Capitals",
+      "date": "2025-05-05",
+      "time": "14:00 GMT",
+      "venue": "Rajiv Gandhi International Stadium, Hyderabad"
+    },
+    {
+      "match_no": 56,
+      "team1": "Mumbai Indians",
+      "team2": "Gujarat Titans",
+      "date": "2025-05-06",
+      "time": "14:00 GMT",
+      "venue": "Wankhede Stadium, Mumbai"
+    },
+    {
+      "match_no": 57,
+      "team1": "Kolkata Knight Riders",
+      "team2": "Chennai Super Kings",
+      "date": "2025-05-07",
+      "time": "14:00 GMT",
+      "venue": "Eden Gardens, Kolkata"
+    },
+    {
+      "match_no": 58,
+      "team1": "Punjab Kings",
+      "team2": "Delhi Capitals",
+      "date": "2025-05-08",
+      "time": "14:00 GMT",
+      "venue": "Punjab Cricket Association IS Bindra Stadium, Mohali"
+    },
+    {
+      "match_no": 59,
+      "team1": "Lucknow Super Giants",
+      "team2": "Royal Challengers Bengaluru",
+      "date": "2025-05-09",
+      "time": "14:00 GMT",
+      "venue": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow"
+    },
+    {
+      "match_no": 60,
+      "team1": "Sunrisers Hyderabad",
+      "team2": "Kolkata Knight Riders",
+      "date": "2025-05-10",
+      "time": "14:00 GMT",
+      "venue": "Rajiv Gandhi International Stadium, Hyderabad"
+    },
+    {
+      "match_no": 61,
+      "team1": "Punjab Kings",
+      "team2": "Mumbai Indians",
+      "date": "2025-05-11",
+      "time": "10:00 GMT",
+      "venue": "Punjab Cricket Association IS Bindra Stadium, Mohali"
+    },
+    {
+      "match_no": 62,
+      "team1": "Delhi Capitals",
+      "team2": "Gujarat Titans",
+      "date": "2025-05-11",
+      "time": "14:00 GMT",
+      "venue": "Arun Jaitley Stadium, Delhi"
+    },
+    {
+      "match_no": 63,
+      "team1": "Chennai Super Kings",
+      "team2": "Rajasthan Royals",
+      "date": "2025-05-12",
+      "time": "14:00 GMT",
+      "venue": "M.A. Chidambaram Stadium, Chennai"
+    },
+    {
+      "match_no": 64,
+      "team1": "Royal Challengers Bengaluru",
+      "team2": "Sunrisers Hyderabad",
+      "date": "2025-05-13",
+      "time": "14:00 GMT",
+      "venue": "M. Chinnaswamy Stadium, Bengaluru"
+    },
+    {
+      "match_no": 65,
+      "team1": "Gujarat Titans",
+      "team2": "Lucknow Super Giants",
+      "date": "2025-05-14",
+      "time": "14:00 GMT",
+      "venue": "Narendra Modi Stadium, Ahmedabad"
+    },
+    {
+      "match_no": 66,
+      "team1": "Mumbai Indians",
+      "team2": "Delhi Capitals",
+      "date": "2025-05-15",
+      "time": "14:00 GMT",
+      "venue": "Wankhede Stadium, Mumbai"
+    },
+    {
+      "match_no": 67,
+      "team1": "Rajasthan Royals",
+      "team2": "Punjab Kings",
+      "date": "2025-05-16",
+      "time": "14:00 GMT",
+      "venue": "Sawai Mansingh Stadium, Jaipur"
+    },
+    {
+      "match_no": 68,
+      "team1": "Royal Challengers Bengaluru",
+      "team2": "Kolkata Knight Riders",
+      "date": "2025-05-17",
+      "time": "14:00 GMT",
+      "venue": "M. Chinnaswamy Stadium, Bengaluru"
+    },
+    {
+      "match_no": 69,
+      "team1": "Gujarat Titans",
+      "team2": "Chennai Super Kings",
+      "date": "2025-05-18",
+      "time": "10:00 GMT",
+      "venue": "Narendra Modi Stadium, Ahmedabad"
+    },
+    {
+      "match_no": 70,
+      "team1": "Lucknow Super Giants",
+      "team2": "Sunrisers Hyderabad",
+      "date": "2025-05-18",
+      "time": "14:00 GMT",
+      "venue": "Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium, Lucknow"
+    },
+    {
+      "match_no": "Qualifier 1",
+      "team1": "TBC",
+      "team2": "TBC",
+      "date": "2025-05-20",
+      "time": "14:00 GMT",
+      "venue": "TBD"
+    },
+    {
+      "match_no": "Eliminator",
+      "team1": "TBC",
+      "team2": "TBC",
+      "date": "2025-05-21",
+      "time": "14:00 GMT",
+      "venue": "TBD"
+    },
+    {
+      "match_no": "Qualifier 2",
+      "team1": "TBC",
+      "team2": "TBC",
+      "date": "2025-05-23",
+      "time": "14:00 GMT",
+      "venue": "TBD"
+    },
+    {
+      "match_no": "Final",
+      "team1": "TBC",
+      "team2": "TBC",
+      "date": "2025-05-25",
+      "time": "14:00 GMT",
+      "venue": "TBD"
+    }
+  ]
+}

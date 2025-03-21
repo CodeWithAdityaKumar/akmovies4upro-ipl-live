@@ -1,0 +1,31 @@
+{
+  "name": "akmovies4upro-live",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
+    "canvas": "^3.1.0",
+    "cloudinary": "^2.6.0",
+    "dotenv": "^16.4.7",
+    "hls.js": "^1.5.20",
+    "next": "15.2.3",
+    "next-cloudinary": "^6.16.0",
+    "node-fetch": "^3.3.2",
+    "pg": "^8.14.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.3",
+    "tailwindcss": "^4"
+  }
+}
