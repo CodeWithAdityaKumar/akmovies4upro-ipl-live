@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect, useMemo, useCallback, memo } from "react";
 import LivePlayer from "../components/LivePlayer";
 import LiveScores from "../components/LiveScores";
 import Navbar from "../components/Navbar";
@@ -5,28 +8,263 @@ import Footer from "../components/Footer";
 import Link from "next/link";
 
 const LivePage = () => {
-  // Sample match data
-  const currentMatch = {
-    id: "42",
-    team1: {
-      name: "Mumbai Indians",
-      short: "MI",
-      score: "167/5",
-      overs: "18.2"
-    },
-    team2: {
-      name: "Chennai Super Kings",
-      short: "CSK",
-      score: "143/8",
-      overs: "16.0"
-    },
-    venue: "Wankhede Stadium, Mumbai",
-    date: "22 Mar 2025",
-    status: "Mumbai Indians need 24 runs to win",
-    stream_url: "https://cdn.jwplayer.com/manifests/pZxWPRg4.m3u8", // Sample HLS stream URL
-    cricket_match_id: "live-cricket-scores/91704/rcb-vs-csk-68th-match-indian-premier-league-2024" // Cricket API match ID
-  };
+  const [matchData, setMatchData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  
+  // Current match ID for RCB vs CSK match
+  const matchId = "live-cricket-scores/89661/pbks-vs-dc-2nd-match-indian-premier-league-2024";
+  const stream_url = "https://cdn.jwplayer.com/manifests/pZxWPRg4.m3u8"; // Sample HLS stream URL
 
+  // Always declare all hooks at the top level
+  // Memoized values for scores that are only computed when data is available
+  const scoreDisplay = useMemo(() => {
+    if (!matchData?.data) return null;
+    
+    const data = matchData.data;
+    // Handle both score and scores fields for backwards compatibility
+    const scores = data?.scores || data?.score || {};
+    const team1Name = Object.keys(scores)[0] || "";
+    const team2Name = Object.keys(scores)[1] || "";
+    const team1Score = scores[team1Name] || "";
+    const team2Score = scores[team2Name] || "";
+    
+    return (
+      <>
+        <div className="text-center">
+          <div className="h-20 w-20 mx-auto mb-2 rounded-full flex items-center justify-center"
+               style={{ backgroundColor: team1Name === 'RCB' ? '#EE0000' : '#FFFF00' }}>
+            <span className="font-bold text-xl text-white">{team1Name}</span>
+          </div>
+          <div className="text-xl font-bold text-gray-900 dark:text-white">
+            {team1Score}
+          </div>
+        </div>
+        
+        <div className="text-center">
+          <span className="inline-block px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-full text-gray-800 dark:text-gray-200 font-bold text-lg">
+            vs
+          </span>
+        </div>
+        
+        <div className="text-center">
+          <div className="h-20 w-20 mx-auto mb-2 rounded-full flex items-center justify-center"
+               style={{ backgroundColor: team2Name === 'CSK' ? '#FFFF00' : '#EE0000' }}>
+            <span className="font-bold text-xl text-white">{team2Name}</span>
+          </div>
+          <div className="text-xl font-bold text-gray-900 dark:text-white">
+            {team2Score}
+          </div>
+        </div>
+      </>
+    );
+  }, [matchData]);
+
+  // Memoized commentary - only re-renders when matchData changes
+  const commentarySection = useMemo(() => {
+    if (!matchData?.data?.commentary || !Array.isArray(matchData.data.commentary) || matchData.data.commentary.length === 0) {
+      return (
+        <div className="text-center py-4 text-gray-500 dark:text-gray-400">
+          No commentary available at the moment
+        </div>
+      );
+    }
+    
+    return matchData.data.commentary.slice(0, 10).map((comment, idx) => (
+      <div key={`comment-${comment.text.substring(0, 20)}-${idx}`} className="flex">
+        <div className="mr-4 flex-shrink-0">
+          <span className="inline-flex items-center justify-center h-8 w-14 rounded bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs font-medium">
+            {comment.over}
+          </span>
+        </div>
+        <div className="flex-1 text-gray-800 dark:text-gray-300">
+          {comment.text}
+        </div>
+      </div>
+    ));
+  }, [matchData]);
+  
+  // Memoize the fetch function to prevent recreation on each render
+
+  // Track consecutive failures for backoff strategy
+  const [consecutiveFailures, setConsecutiveFailures] = useState(0);
+
+  const fetchMatchData = useCallback(async (isBackgroundUpdate = false) => {
+    try {
+      // Only show loading for initial load, not background updates
+      if (!isBackgroundUpdate && !matchData) {
+        setLoading(true);
+      }
+      
+      // Set up a timeout for the fetch to prevent hanging requests
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10-second timeout
+      
+      // Use cache: 'no-store' to ensure we get fresh data each time
+      const response = await fetch(`/api/cricket?matchId=${matchId}&t=${Date.now()}`, {
+        cache: 'no-store',
+        headers: {
+          'Cache-Control': 'no-cache'
+        },
+        signal: controller.signal
+      });
+      
+      // Clear the timeout as we've received a response
+      clearTimeout(timeoutId);
+      
+      if (!response.ok) {
+        throw new Error(`Failed to fetch cricket data: ${response.status}`);
+      }
+
+      const newData = await response.json();
+      
+      // Reset consecutive failures on success
+      if (consecutiveFailures > 0) {
+        setConsecutiveFailures(0);
+      }
+      
+      // For initial load, set the complete data
+      if (!matchData) {
+        setMatchData(newData);
+      } else {
+        // For subsequent updates, only update specific fields (score, over, commentary)
+        setMatchData(prevData => {
+          // If previous data is null, use the new data directly
+          if (!prevData) return newData;
+          
+          // Create a deep copy of the previous data to avoid unwanted side effects
+          const updatedData = JSON.parse(JSON.stringify(prevData));
+          
+          // Only update the dynamic parts (score/scores, over, commentary) from the nested data structure
+          // Handle both data.score and data.scores for backwards compatibility
+          if (newData.data?.score) {
+            updatedData.data.score = newData.data.score;
+          } else if (newData.data?.scores) {
+            updatedData.data.scores = newData.data.scores;
+          }
+          
+          if (newData.data?.status) {
+            updatedData.data.status = newData.data.status;
+          }
+          
+          if (newData.data?.over) {
+            updatedData.data.over = newData.data.over;
+          }
+          
+          if (newData.data?.commentary) {
+            updatedData.data.commentary = newData.data.commentary;
+          }
+          
+          // Return the selectively updated data
+          return updatedData;
+        });
+      }
+      
+      setError(null);
+      return true; // Indicate success
+    } catch (err) {
+      console.error('Error fetching match data:', err);
+      
+      // Only set error state for non-background updates
+      // This ensures the UI doesn't show error states during background refreshes
+      if (!isBackgroundUpdate) {
+        setError('Could not load match data');
+      }
+      
+      // Increment consecutive failures for backoff strategy
+      setConsecutiveFailures(prev => prev + 1);
+      return false; // Indicate failure
+    } finally {
+      // Only update loading state for non-background updates
+      if (!isBackgroundUpdate) {
+        setLoading(false);
+      }
+    }
+  }, [matchData, matchId, consecutiveFailures]);
+
+  useEffect(() => {
+    // Initial fetch
+    fetchMatchData(false);
+    
+    // Dynamic interval based on consecutive failures (backoff strategy)
+    const getRefreshInterval = () => {
+      // Start with 30 seconds, but back off if consecutive failures occur
+      // 30s → 60s → 90s → 120s (max)
+      const baseInterval = 30000;
+      const maxInterval = 120000;
+      const backoffFactor = Math.min(3, consecutiveFailures); // Cap at 3x backoff
+      
+      return Math.min(maxInterval, baseInterval * (backoffFactor + 1));
+    };
+    
+    // Set up polling with dynamic interval for silent background updates
+    const intervalId = setInterval(() => {
+      // Pass true to indicate this is a background update
+      fetchMatchData(true)
+        .catch(err => console.error('Background refresh error:', err))
+        .finally(() => {
+          // Properly adjust interval based on current failure state
+          const newInterval = getRefreshInterval();
+          
+          // The 'interval' property isn't directly available on the intervalId
+          // We need to recreate the interval with the new timing regardless
+          clearInterval(intervalId);
+          const newIntervalId = setInterval(() => {
+            fetchMatchData(true)
+              .catch(err => console.error('Background refresh error:', err));
+          }, newInterval);
+        });
+    }, getRefreshInterval());
+    
+    // Cleanup interval on component unmount
+    return () => clearInterval(intervalId);
+  }, [fetchMatchData, consecutiveFailures]);
+
+
+  if (loading) {
+    return (
+      <main className="min-h-screen bg-gray-100 dark:bg-gray-900">
+        <Navbar />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="mb-6">
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Live Match</h1>
+            <p className="text-gray-600 dark:text-gray-400">Loading match data...</p>
+          </div>
+          <div className="flex items-center justify-center h-96">
+            <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-blue-500"></div>
+          </div>
+        </div>
+      </main>
+    );
+  }
+
+  if (error || !matchData) {
+    return (
+      <main className="min-h-screen bg-gray-100 dark:bg-gray-900">
+        <Navbar />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="mb-6">
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Live Match</h1>
+            <p className="text-red-500 dark:text-red-400">{error || "No match data available"}</p>
+          </div>
+        </div>
+      </main>
+    );
+  }
+
+  // Extract necessary data from matchData - but only if it exists
+  const data = matchData?.data;
+  const title = data?.title || "";
+  const status = data?.status || "";
+  const matchDetails = data?.matchDetails || {};
+  
+  // Extract venue and date
+  const venue = matchDetails?.venue || "";
+  const date = matchDetails?.date || "";
+  
+  // Handle both score and scores fields for backwards compatibility
+  const scores = data?.scores || data?.score || {};
+  
   return (
     <main className="min-h-screen bg-gray-100 dark:bg-gray-900">
       <Navbar />
@@ -35,7 +273,7 @@ const LivePage = () => {
         <div className="mb-6">
           <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Live Match</h1>
           <p className="text-gray-600 dark:text-gray-400">
-            IPL 2025 • Match {currentMatch.id}
+            IPL 2024 • {matchDetails?.Match || ""}
           </p>
         </div>
         
@@ -43,12 +281,12 @@ const LivePage = () => {
           {/* Main Content - Video Player */}
           <div className="lg:col-span-2">
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden">
-              <LivePlayer matchId={currentMatch.id} streamUrl={currentMatch.stream_url} />
+              <LivePlayer matchId={matchId} streamUrl={stream_url} />
               
               <div className="p-6">
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
                   <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-0">
-                    {currentMatch.team1.name} vs {currentMatch.team2.name}
+                    {title}
                   </h2>
                   <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200">
                     <span className="h-2 w-2 bg-red-500 rounded-full mr-1.5 animate-pulse"></span>
@@ -57,39 +295,11 @@ const LivePage = () => {
                 </div>
                 
                 <div className="flex justify-center items-center space-x-8 my-6">
-                  <div className="text-center">
-                    <div className="h-20 w-20 mx-auto mb-2 bg-blue-900 rounded-full flex items-center justify-center">
-                      <span className="font-bold text-xl text-white">{currentMatch.team1.short}</span>
-                    </div>
-                    <div className="text-xl font-bold text-gray-900 dark:text-white">
-                      {currentMatch.team1.score}
-                    </div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">
-                      ({currentMatch.team1.overs} Overs)
-                    </div>
-                  </div>
-                  
-                  <div className="text-center">
-                    <span className="inline-block px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-full text-gray-800 dark:text-gray-200 font-bold text-lg">
-                      vs
-                    </span>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="h-20 w-20 mx-auto mb-2 bg-yellow-600 rounded-full flex items-center justify-center">
-                      <span className="font-bold text-xl text-white">{currentMatch.team2.short}</span>
-                    </div>
-                    <div className="text-xl font-bold text-gray-900 dark:text-white">
-                      {currentMatch.team2.score}
-                    </div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">
-                      ({currentMatch.team2.overs} Overs)
-                    </div>
-                  </div>
+                  {scoreDisplay}
                 </div>
                 
                 <div className="text-center p-3 bg-blue-100 dark:bg-blue-900 rounded-lg text-blue-800 dark:text-blue-200 font-medium">
-                  {currentMatch.status}
+                  {status}
                 </div>
                 
                 <div className="mt-6 grid grid-cols-2 gap-4">
@@ -116,28 +326,7 @@ const LivePage = () => {
               </div>
               <div className="p-6 h-80 overflow-y-auto">
                 <div className="space-y-4">
-                  {[
-                    { over: "16.0", text: "WICKET! Jadeja takes a stunning catch at deep square leg to dismiss Tilak Varma for 42 (29)." },
-                    { over: "15.4", text: "SIX! Tilak Varma smashes Pathirana for a huge six over deep midwicket." },
-                    { over: "15.1", text: "FOUR! Tim David finds the gap between point and cover for a boundary." },
-                    { over: "14.6", text: "Dot ball to end the over. Good comeback by Chahar after conceding a boundary." },
-                    { over: "14.3", text: "FOUR! Tilak Varma sweeps Chahar to the fine leg boundary." },
-                    { over: "13.2", text: "WICKET! Dhoni makes no mistake with the gloves, stumping Suryakumar Yadav for 28 (22)." },
-                    { over: "12.5", text: "SIX! Suryakumar Yadav with his trademark shot over fine leg for a maximum." },
-                    { over: "11.2", text: "Mumbai rotating the strike well, keeping up with the required run rate." },
-                    { over: "10.4", text: "FOUR! Perfectly timed drive by Tilak Varma through the covers." }
-                  ].map((comment, idx) => (
-                    <div key={idx} className="flex">
-                      <div className="mr-4 flex-shrink-0">
-                        <span className="inline-flex items-center justify-center h-8 w-14 rounded bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 text-xs font-medium">
-                          {comment.over}
-                        </span>
-                      </div>
-                      <div className="flex-1 text-gray-800 dark:text-gray-300">
-                        {comment.text}
-                      </div>
-                    </div>
-                  ))}
+                  {commentarySection}
                 </div>
               </div>
             </div>
@@ -151,7 +340,8 @@ const LivePage = () => {
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Live Cricket Score</h3>
               </div>
               <div className="p-4">
-                <LiveScores matchId={currentMatch.cricket_match_id} className="w-full" />
+                {/* Pass match data directly to LiveScores component instead of having it fetch independently */}
+                <LiveScores matchData={matchData?.data} className="w-full" />
               </div>
             </div>
             {/* Match Information */}
@@ -162,17 +352,23 @@ const LivePage = () => {
               <div className="p-6">
                 <dl className="space-y-4">
                   <div>
+                    <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Match</dt>
+                    <dd className="mt-1 text-gray-900 dark:text-white">{matchDetails.Match || ""}</dd>
+                  </div>
+                  <div>
                     <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Venue</dt>
-                    <dd className="mt-1 text-gray-900 dark:text-white">{currentMatch.venue}</dd>
+                    <dd className="mt-1 text-gray-900 dark:text-white">{venue}</dd>
                   </div>
                   <div>
-                    <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Date & Time</dt>
-                    <dd className="mt-1 text-gray-900 dark:text-white">{currentMatch.date} • 7:30 PM IST</dd>
+                    <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Date</dt>
+                    <dd className="mt-1 text-gray-900 dark:text-white">{date}</dd>
                   </div>
-                  <div>
-                    <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Toss</dt>
-                    <dd className="mt-1 text-gray-900 dark:text-white">Chennai Super Kings, elected to bat</dd>
-                  </div>
+                  {data.playerOfTheMatch && (
+                    <div>
+                      <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Player of the Match</dt>
+                      <dd className="mt-1 text-gray-900 dark:text-white">{data.playerOfTheMatch}</dd>
+                    </div>
+                  )}
                   <div>
                     <dt className="text-sm font-medium text-gray-500 dark:text-gray-400">Umpires</dt>
                     <dd className="mt-1 text-gray-900 dark:text-white">Kumar Dharmasena, Chris Gaffaney</dd>

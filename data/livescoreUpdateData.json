@@ -1,0 +1,445 @@
+{
+    "success": true,
+    "data": {
+      "title": "Royal Challengers Bengaluru vs Chennai Super Kings, 68th Match, May 18, Indian Premier League 2024",
+      "status": "Royal Challengers Bengaluru won by 27 runs",
+      "scores": {
+        "RCB": "218/5 (20)",
+        "CSK": "191/7 (20)"
+      },
+      "matchDetails": {
+        "Match": "68th Match",
+        "teams": [
+          "Royal Challengers Bengaluru",
+          "Chennai Super Kings"
+        ],
+        "venue": "M.Chinnaswamy Stadium, Bengaluru",
+        "series": "Indian Premier League 2024",
+        "time": "",
+        "date": "May 18",
+        "squads": {
+          "team1": {
+            "name": "RCB",
+            "playingXI": [
+              {
+                "name": "Faf du Plessis",
+                "isCaptain": true,
+                "role": "Batter",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c170639/player_face.jpg"
+              },
+              {
+                "name": "Virat Kohli",
+                "isCaptain": false,
+                "role": "Batter",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c332891/player_face.jpg"
+              },
+              {
+                "name": "Glenn Maxwell",
+                "isCaptain": false,
+                "role": "Batting Allrounder",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c352454/player_face.jpg"
+              },
+              {
+                "name": "Rajat Patidar",
+                "isCaptain": false,
+                "role": "Batter",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c234983/player_face.jpg"
+              },
+              {
+                "name": "Cameron Green",
+                "isCaptain": false,
+                "role": "Batting Allrounder",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c352451/player_face.jpg"
+              },
+              {
+                "name": "Mahipal Lomror",
+                "isCaptain": false,
+                "role": "Batting Allrounder",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c226541/player_face.jpg"
+              },
+              {
+                "name": "Dinesh Karthik",
+                "isCaptain": false,
+                "role": "WK-Batter",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c244969/player_face.jpg"
+              },
+              {
+                "name": "Karn Sharma",
+                "isCaptain": false,
+                "role": "Bowler",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c226391/player_face.jpg"
+              },
+              {
+                "name": "Yash Dayal",
+                "isCaptain": false,
+                "role": "Bowler",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c182026/player_face.jpg"
+              },
+              {
+                "name": "Lockie Ferguson",
+                "isCaptain": false,
+                "role": "Bowler",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c351814/player_face.jpg"
+              },
+              {
+                "name": "Mohammed Siraj",
+                "isCaptain": false,
+                "role": "Bowler",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c352491/player_face.jpg"
+              }
+            ],
+            "substitutes": [
+              {
+                "name": "Swapnil Singh",
+                "isCaptain": false,
+                "role": "Bowling Allrounder",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c182026/player_face.jpg"
+              }
+            ],
+            "bench": [
+              {
+                "name": "Anuj Rawat",
+                "isCaptain": false,
+                "role": "WK-Batter",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c226472/player_face.jpg"
+              },
+              {
+                "name": "Suyash Prabhudessai",
+                "isCaptain": false,
+                "role": "Batter",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c182026/player_face.jpg"
+              },
+              {
+                "name": "Vijaykumar Vyshak",
+                "isCaptain": false,
+                "role": "Bowler",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c182026/player_face.jpg"
+              },
+              {
+                "name": "Himanshu Sharma",
+                "isCaptain": false,
+                "role": "Bowler",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c182026/player_face.jpg"
+              },
+              {
+                "name": "Mayank Dagar",
+                "isCaptain": false,
+                "role": "Bowler",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c182026/player_face.jpg"
+              },
+              {
+                "name": "Manoj Bhandage",
+                "isCaptain": false,
+                "role": "Batting Allrounder",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c182026/player_face.jpg"
+              },
+              {
+                "name": "Tom Curran",
+                "isCaptain": false,
+                "role": "Bowling Allrounder",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c170967/player_face.jpg"
+              },
+              {
+                "name": "Alzarri Joseph",
+                "isCaptain": false,
+                "role": "Bowler",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c244661/player_face.jpg"
+              },
+              {
+                "name": "Akash Deep",
+                "isCaptain": false,
+                "role": "Bowler",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c182026/player_face.jpg"
+              },
+              {
+                "name": "Saurav Chauhan",
+                "isCaptain": false,
+                "role": "Batting Allrounder",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c182026/player_face.jpg"
+              },
+              {
+                "name": "Rajan Kumar",
+                "isCaptain": false,
+                "role": "Bowler",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c182026/player_face.jpg"
+              },
+              {
+                "name": "Andy Flower",
+                "isCaptain": false,
+                "role": "Head Coach",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c153350/player_face.jpg"
+              },
+              {
+                "name": "Adam Griffith",
+                "isCaptain": false,
+                "role": "Bowling Coach",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c182026/player_face.jpg"
+              },
+              {
+                "name": "Malolan Rangarajan",
+                "isCaptain": false,
+                "role": "Head of Scouting and Fielding Coach",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c182026/player_face.jpg"
+              },
+              {
+                "name": "Neil McKenzie",
+                "isCaptain": false,
+                "role": "Batting Coach",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c154037/player_face.jpg"
+              }
+            ],
+            "flagUrl": ""
+          },
+          "team2": {
+            "name": "CSK",
+            "playingXI": [
+              {
+                "name": "Rachin Ravindra",
+                "isCaptain": false,
+                "role": "Batting Allrounder",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c351609/player_face.jpg"
+              },
+              {
+                "name": "Ruturaj Gaikwad",
+                "isCaptain": true,
+                "role": "Batter",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c333874/player_face.jpg"
+              },
+              {
+                "name": "Daryl Mitchell",
+                "isCaptain": false,
+                "role": "Batting Allrounder",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c351601/player_face.jpg"
+              },
+              {
+                "name": "Ajinkya Rahane",
+                "isCaptain": false,
+                "role": "Batter",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c332892/player_face.jpg"
+              },
+              {
+                "name": "Ravindra Jadeja",
+                "isCaptain": false,
+                "role": "Bowling Allrounder",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c352483/player_face.jpg"
+              },
+              {
+                "name": "MS Dhoni",
+                "isCaptain": false,
+                "role": "WK-Batter",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c170677/player_face.jpg"
+              },
+              {
+                "name": "Mitchell Santner",
+                "isCaptain": false,
+                "role": "Bowling Allrounder",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c351608/player_face.jpg"
+              },
+              {
+                "name": "Shardul Thakur",
+                "isCaptain": false,
+                "role": "Bowler",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c352487/player_face.jpg"
+              },
+              {
+                "name": "Tushar Deshpande",
+                "isCaptain": false,
+                "role": "Bowler",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c190903/player_face.jpg"
+              },
+              {
+                "name": "Simarjeet Singh",
+                "isCaptain": false,
+                "role": "Bowler",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c182026/player_face.jpg"
+              },
+              {
+                "name": "Maheesh Theekshana",
+                "isCaptain": false,
+                "role": "Bowler",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c351936/player_face.jpg"
+              }
+            ],
+            "substitutes": [
+              {
+                "name": "Shivam Dube",
+                "isCaptain": false,
+                "role": "Bowling Allrounder",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c183291/player_face.jpg"
+              },
+              {
+                "name": "Sameer Rizvi",
+                "isCaptain": false,
+                "role": "Batter",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c182026/player_face.jpg"
+              }
+            ],
+            "bench": [
+              {
+                "name": "Prashant Solanki",
+                "isCaptain": false,
+                "role": "Bowler",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c182026/player_face.jpg"
+              },
+              {
+                "name": "Shaik Rasheed",
+                "isCaptain": false,
+                "role": "Batter",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c182026/player_face.jpg"
+              },
+              {
+                "name": "Mukesh Choudhary",
+                "isCaptain": false,
+                "role": "Bowler",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c182026/player_face.jpg"
+              },
+              {
+                "name": "Ajay Jadav Mandal",
+                "isCaptain": false,
+                "role": "Bowler",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c182026/player_face.jpg"
+              },
+              {
+                "name": "Richard Gleeson",
+                "isCaptain": false,
+                "role": "Bowler",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c244809/player_face.jpg"
+              },
+              {
+                "name": "RS Hangargekar",
+                "isCaptain": false,
+                "role": "Bowler",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c226294/player_face.jpg"
+              },
+              {
+                "name": "Nishant Sindhu",
+                "isCaptain": false,
+                "role": "Batting Allrounder",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c182026/player_face.jpg"
+              },
+              {
+                "name": "Aravelly Avanish",
+                "isCaptain": false,
+                "role": "WK-Batter",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c182026/player_face.jpg"
+              },
+              {
+                "name": "Stephen Fleming",
+                "isCaptain": false,
+                "role": "Head coach",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c151497/player_face.jpg"
+              },
+              {
+                "name": "Michael Hussey",
+                "isCaptain": false,
+                "role": "Batting coach",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c180290/player_face.jpg"
+              },
+              {
+                "name": "Dwayne Bravo",
+                "isCaptain": false,
+                "role": "Bowling coach",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c171033/player_face.jpg"
+              },
+              {
+                "name": "Rajiv Kumar",
+                "isCaptain": false,
+                "role": "Batting and Fielding Coach",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c182026/player_face.jpg"
+              },
+              {
+                "name": "Eric Simons",
+                "isCaptain": false,
+                "role": "Bowling Consultant",
+                "imageUrl": "https://static.cricbuzz.com/a/img/v1/40x40/i1/c157813/player_face.jpg"
+              }
+            ],
+            "flagUrl": ""
+          }
+        }
+      },
+      "playerOfTheMatch": "PLAYER OF THE MATCH Faf du Plessis",
+      "commentary": [
+        {
+          "over": "",
+          "text": "RCB doing a lap of honour to thank the crowd as Faf promised he would do. Not many would have left the ground for sure tonight. Such a thrilling game and the partisan RCB crowd get what they wanted - their side into the playoffs at the expense of CSK. 6 on the trot for RCB and they are a side bubbling with momentum. They will go to Ahmedabad to play the Eliminator and will wait to face their opponents. That will be known tomorrow. On that note we sign off. It's been a pleasure to bring you the coverage of this. Hope you enjoyed it. The cricket continues and there's no respite. We will be back tomorrow. On behalf of Nikhil Jadhav, Pradeep Krishnamurthy and Harish Vutakuru our scorer, this is me (Srivathsa) signing off. Remember to sleep tight and smile. Bye."
+        },
+        {
+          "over": "",
+          "text": "Faf du Plessis | RCB captain and Player of the Match: What a night. Unbelievable and such a great atmosphere, such a pleasure to finish off the season at home with a win. Batting first, I think it was the hardest pitch I have ever played on in T20s. Myself and Virat were talking about 140-150 after we came back from the rain break. The communication from the umpires was there was a lot of rain on the pitch, they wanted to push the game and that makes sense. When we came back, my goodness, I was telling Mitch Santner it was like a day 5 Test match at Ranchi and to get 200 on that was unbelievable. The last 6 games the batters have batted with good intent and good strike-rate. We were slow earlier on and we wanted more intent and that was awesome. We were defending 175, it got a bit close, at one stage, with MS there, I thought, oh dear, he has done it so many times. The way we bowled with the wet ball was unbelievable, we tried to change it. I dedicate this Man of the Match to Yash Dayal. The way he bowled was unbelievable. For a man who's fairly new, he deserves it. [on what he told Dayal before the last over] Pace off is the best option on this pitch and trust your skills and enjoy, this is what you trained for. The yorker did not work the 1st ball and he went back to pace off and it worked unbelievably well. [on the crowd tonight] It's crazy, even when we weren't winning the fans were here. We in the changeroom we felt it was something we had to get right. Coming here tonight, it was set up nicely, CSK v RCB, unbelievable atmosphere and we as a team will do a lap of honour to thank the crowd for the support. It's really important that we enjoy this, great 6 games in a row and the first goal in the IPL is to get into the knockouts and we have done that, enjoy this but get back to work tomorrow."
+        },
+        {
+          "over": "",
+          "text": "Stats round-up by Deepu Narayanan"
+        },
+        {
+          "over": "",
+          "text": "Most consecutive wins for RCB (IPL) 7 in 2011 (Runners up) 6 in 2024 5 in 2009 (Runners up) 5 in 2016 (Runners up)"
+        },
+        {
+          "over": "",
+          "text": "RCB has become the first side ever to qualify for the Playoffs after having just a solitary win in their first seven games of a season."
+        },
+        {
+          "over": "",
+          "text": "The last time RCB made it to the Playoffs with Chinnaswamy Stadium as their home base was in IPL 2016. Like this season, they came back from 2-5 at the halfway mark to winning six of the last seven league games."
+        },
+        {
+          "over": "",
+          "text": "RCB becomes the first side to have sequences of six successive wins and six successive defeats each in the same season. Deccan Chargers in 2010, PBKS in 2020 and SRH in 2022 have had sequence of five consecutive wins and defeats each."
+        },
+        {
+          "over": "",
+          "text": "Ruturaj Gaikwad: I think it was a good wicket to be honest, it was spinning and gripping a little bit, but I think 200 on this ground was gettable. We kept losing wickets at regular intervals, it was a matter of one or two hits, sometimes that can happen in a T20 game. Pretty happy with what the target was, to sum up the season, I am pretty happy to have seven wins out of 14 games. Just couldn't get over the line in the last two balls. With the kind of injuries we had, missing out on two frontline bowlers, not having Conway at the top of the order as well, I think missing out on three key players made a huge difference. Credit to the CSK staff and everyone who put up a great show for us throughout the season. There were many challenges for us right throughout the first game. Injury to Fizz (Mustafizur), then injury to Pathirana as well, he came back and then again Pathirana missed out. When you have injuries around, you have to get that balance in the team and pick it (the team) for every game. I think this season sums up well where we had to tinker around with our playing XI, considering the injuries and all the illness (of the players) as well. Happy with the seven wins, couldn't get over the line though. Happy with it. We got 10 from the last 2 balls in our last knockout game last year so this was a similar situation, things didn't go our way (this season) though. For me, personal milestones don't really matter a lot, after all the ultimate goal is to win. If you are not getting there it's a disappointment. Doesn't matter if you score 100 runs or 500-600 runs in a season. I am disappointed (after losing.)"
+        },
+        {
+          "over": "",
+          "text": "Lockie Ferguson - Unbelievable, not sure how to put in words, complete team effort, wasn't easy to bowl at the end, it was very wet. Yash, to get rid of MS and get the job done, it was amazing. It's the nature of bowling here, mix it up and keep the batters guessing. There's a bit of spin as well and we needed to keep the batters guessing. In the end, we got the job done. If I could rewind time (on asking why he didn't bowl a yorker in the 19th over), but the wicket was doing a bit when bowled on a length. We know how good Jaddu is with the yorker ball, but perhaps we could have tried to. Thankful to Yash for getting the job done."
+        },
+        {
+          "over": "",
+          "text": "They are showing the celebrations again - and funnily Maxwell who was off the field after his spell is jumping up and down as soon as the match ended and Kohli I saw shed a tear or two. Overcome with emotion he was. MSD meanwhile watching on from the dugout as usual did not give anything away, just blinked his eyes a couple of times, looked straight ahead and was stoic. What contrasting emotions and what a match."
+        },
+        {
+          "over": "",
+          "text": "00:09 Local Time, 18:39 GMT, 00:09 IST: Finally RCB get one over CSK in a knockout game. It has been often the men in yellow who have had the wood over the men in red but it's redemption time for RCB tonight. They set the tone with the bat as everyone batted well to give their side 218 and then Maxwell struck first ball to remove Gaikwad to give them a dream start. The plans to Dube was spot-on and the dangerous left-hander was nipped out for a low score. The partnership between Rahane and Ravindra set the innings back on track but Lockie struck first ball to remove the former. Ravindra was run-out after a mix-up with Dube and one can now say that was the turning point of the game. Jadeja though did not give up and once again looked set to break RCB hearts as he struck them cleanly. And that man MSD threatened as well, that six over the roof at fine-leg would have brought back all the horror memories for RCB fans when CSK would win from nowhere. But credit to Yash Dayal who showed a cool head and forced a top-edge that got MS and from then he kept nailing the back of the hand slower balls and eventually took his side home. The crowd's reaction when RCB won must have been the loudest it has ever been as they milked it all in. So 6 on the trot for RCB and they make the playoffs. Meanwhile a rare setback for CSK as they fail to make it to the last four. Stay tuned for the presentations..."
+        },
+        {
+          "over": "19.6",
+          "text": "Yash Dayal to Jadeja, no run, CSK knocked out! RCB qualify. Take a bow Yash Dayal. He was the much maligned bowler after Rinku Singh hit him for five consecutive sixes to win an improbable game. Ever since he has been down, but tonight it's his redemption story. His life has come full circle and he must be the happiest man on the planet right now. Sports gives us these moments. When you have a chance to turn things around. And what a turnaround this has been for Yash Dayal, imagine the pressure he must have been under - after that out of the roof six against MSD first ball. And suddenly all those old demons would have come back to speak to him in his head. Under extreme pressure against arguably the greatest finisher the game has ever seen, with zero room to hide anywhere, he gets him out and takes his side to the playoffs. So celebrate Yash Dayal tonight, RCB fans. Coming back to the last ball, another back of the hand slower ball dug in outside off, Jadeja swipes and misses. And the celebrations begin, the reactions of Kohli who nearly had his eye sockets pop out as he punches the air, Faf hugging Kohli, Anushka Sharma double fist-pumping and the crowd raising the decibel levels to such a notch that it could be heard from Kathriguppe to Cubbon Park. A game that certainly lived up to its billing and the packed Chinnaswamy will talk about this game for ages to come"
+        },
+        {
+          "over": "19.5",
+          "text": "Yash Dayal to Jadeja, no run, look at Yash Dayal and the others celebrating! They know just a legal delivery will do now. A back of the hand slower ball outside off, Jadeja swipes and misses, inside the tramline and it's a dot. Yash Dayal is near Karthik and jumping up and down. Kohli is fist-pumping in delight and the crowd go mental"
+        },
+        {
+          "over": "",
+          "text": "10 off 2. The same equation in the final last year. Jadeja did it against Mohit. Can he do it again? Can Yash Dayal not bowl an extra?"
+        },
+        {
+          "over": "19.4",
+          "text": "Yash Dayal to Thakur, 1 run, a back of the hand slower ball on the stumps, Thakur slogs and it's a thick outside-edge to short third man, just one and more importantly Jadeja is on strike"
+        },
+        {
+          "over": "",
+          "text": "11 off 3 and must say RCB heavy favorites here. Kohli comes to Yash Dayal to have a word. Faf is meanwhile setting the field."
+        },
+        {
+          "over": "19.3",
+          "text": "Yash Dayal to Thakur, no run, a big dot. A back of the hand slower ball dug in, Thakur swipes and misses, Karthik prevents the bye and Jadeja is watching all this from the other end"
+        },
+        {
+          "over": "",
+          "text": "Shardul Thakur, right handed bat, comes to the crease"
+        },
+        {
+          "over": "19.2",
+          "text": "Yash Dayal to Dhoni, out Caught by Swapnil Singh!! And Yash Dayal responds with a wicket. End of Dhoni. It's the back of the hand slower ball on the stumps, Dhoni swipes and it's a fat top-edge, straight up and how cool was Swapnil at deep backward square leg under that, takes it nonchalantly and gives his side the edge. Yash Dayal has his arms aloft in celebration. Now it's the turn of RCB to celebrate. After the catch was taken, Dhoni punched his bat in frustration and muttered something to himself, looking disappointed, before walking away. Dhoni c Swapnil Singh b Yash Dayal 25(13) [4s-3 6s-1]"
+        },
+        {
+          "over": "",
+          "text": "Yash Dayal to Dhoni, THATS OUT!! Caught!!"
+        }
+      ]
+    }
+  }

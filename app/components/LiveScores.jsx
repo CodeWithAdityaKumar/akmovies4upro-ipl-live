@@ -3,46 +3,32 @@
 import { useState, useEffect } from 'react';
 import { formatMatchData, getTeamColor } from '../../utils/cricketUtils';
 
-const LiveScores = ({ matchId, className }) => {
-  const [matchData, setMatchData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+// Updated to receive matchData directly from parent instead of fetching independently
+const LiveScores = ({ matchData: propMatchData, className }) => {
   const [expanded, setExpanded] = useState(false);
-
+  // Use formatted data from props
+  const [formattedData, setFormattedData] = useState(null);
+  
+  // Process incoming match data prop when it changes
   useEffect(() => {
-    const fetchMatchData = async () => {
-      if (!matchId) {
-        setLoading(false);
-        return;
-      }
-
-      try {
-        setLoading(true);
-        const response = await fetch(`/api/cricket?matchId=${matchId}`);
-        
-        if (!response.ok) {
-          throw new Error(`Failed to fetch cricket data: ${response.status}`);
-        }
-
-        const data = await response.json();
-        const formattedData = formatMatchData(data);
-        setMatchData(formattedData);
-        setError(null);
-      } catch (err) {
-        console.error('Error fetching match data:', err);
-        setError('Could not load match data');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchMatchData();
-    
-    // Refresh data every 30 seconds for live updates
-    const intervalId = setInterval(fetchMatchData, 30000);
-    
-    return () => clearInterval(intervalId);
-  }, [matchId]);
+    if (propMatchData) {
+      // Ensure data compatibility before formatting
+      const dataToFormat = {
+        ...propMatchData,
+        // Handle both scores and score for better compatibility
+        scores: propMatchData.scores || propMatchData.score || {}
+      };
+      
+      // Format the data received from props
+      const formatted = formatMatchData(dataToFormat);
+      setFormattedData(formatted);
+    }
+  }, [propMatchData]);
+  
+  // Loading state derived from props
+  const loading = !propMatchData;
+  // Get error state from props if available
+  const error = propMatchData?.error || null;
 
   if (loading) {
     return (
@@ -54,7 +40,7 @@ const LiveScores = ({ matchId, className }) => {
     );
   }
 
-  if (error || !matchData) {
+  if (error || !propMatchData) {
     return (
       <div className={`bg-gray-900 rounded-lg p-3 text-gray-400 text-sm ${className}`}>
         {error || "No match data available"}
@@ -62,7 +48,10 @@ const LiveScores = ({ matchId, className }) => {
     );
   }
 
-  const { title, status, scores, teams, recentCommentary, playerOfTheMatch } = matchData;
+  // Use the formattedData state which updates only when props change
+  if (!formattedData) return null;
+  
+  const { title, status, scores, teams, recentCommentary, playerOfTheMatch } = formattedData;
   
   // Extract team names for display
   const team1Name = Object.keys(scores)[0] || teams?.team1?.name || '';

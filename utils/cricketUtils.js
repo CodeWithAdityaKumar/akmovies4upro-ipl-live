@@ -17,7 +17,8 @@ export const formatMatchData = (matchData) => {
   return {
     title: data.title || '',
     status: data.status || '',
-    scores: data.scores || {},
+    // Handle both scores and score formats
+    scores: data.scores || data.score || {},
     matchDetails: data.matchDetails || {},
     playerOfTheMatch: data.playerOfTheMatch || '',
     teams: {
